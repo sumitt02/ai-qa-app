@@ -275,8 +275,6 @@ ai-qa-app/
 - **In-process background tasks** — using FastAPI `BackgroundTasks`. For heavy production load I'd switch to Celery or RQ.
 - **Single-tenant ChromaDB** — fine for thousands of files. For real scale, swap for Pinecone / Qdrant Cloud (the abstraction in `vector_service.py` makes this a one-file change).
 - **No frontend tests** — backend has 99% coverage; frontend would benefit from Vitest + Testing Library if given more time.
-- **Cloud deploy** works on any container host (Render, Railway, Fly.io, ECS). See [DEPLOYMENT.md](./DEPLOYMENT.md) for a step-by-step Render guide using the included `render.yaml` Blueprint.
-
 ---
 
 ## 📜 License
